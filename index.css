@@ -21,6 +21,21 @@ input,select{vertical-align:middle}
   max-width: 100vw;
 }
 
+
+
+h1, h2 {
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+
+
 body {
     max-width: 100vw;
   font-family: 'Helvetica Neue', sans-serif;
@@ -213,37 +228,112 @@ svg[height='0'][aria-hidden='true'] {
 }
 
 
+/* ----------- Medium devices (Tablets, 768px and up) ----------- */
+@media (max-width: 1024px) {
+  .logo img {
+    height: 6vw;
+  }
 
+  .menu a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
 
+  .back img {
+    width: 90vw;
+    height: 60vh;
+  }
 
+  .frame {
+    box-shadow: 0 0 0 4em;
+    filter: blur(1em) url(#round);
+  }
 
-
-
-
-
-
-
-/* Optional Layout Properties */
-html, body, header, article {
-  display: grid;
+  .cta {
+    min-width: 10em;
+    font-size: 0.9rem;
+    padding: 0.6em 1em;
+  }
 }
 
-header {
-  grid-gap: 1em;
-}
 
-h1, h2 {
-  margin: 0;
-  font-weight: 500;
-  text-align: center;
-  text-wrap: balance;
-}
+/* ----------- Small devices (Phones, 600px and down) ----------- */
+@media (max-width: 600px) {
+  header {
+    margin: 20px auto;
+    width: 95vw;
+  }
 
-h2 {
-  font-size: 1em;
-}
+  .nav {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
 
-img {
-  width: 100%;
+  .logo img {
+    height: 10vw;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu a {
+    margin: 5px 10px;
+    font-size: 0.85rem;
+  }
+
+  .featured {
+    width: 85vw;
+    max-width: 85vw;
+    justify-content: center;
+  }
+
+  .back img {
+    width: 100%;
+    height: 70vh;
+    min-height: 15em;
+  }
+
+  .frame {
+    box-shadow: 0 0 0 2.5em;
+    filter: blur(0.75em) url(#round);
+  }
+
+  .cta {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 0.5em 0.75em;
+    justify-content: center;
+  }
+
+  .cta.after {
+    width: 80%;
+    font-size: 0.85rem;
+    padding: 0.5em 0.75em;
+    justify-content: space-between;
+  }
+
+  .dots {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.75em;
+  }
+
+  .dots span {
+    width: 8px;
+    height: 8px;
+  }
+
+  h1, h2 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 0.9em;
+  }
 }
 
