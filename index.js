@@ -117,3 +117,47 @@ function updateDots() {
 function toggleMenu() {
   document.querySelector('.menu').classList.toggle('active');
 }
+
+
+
+
+const consultBtn = document.getElementById("stickyConsultBtn");
+const nav = document.querySelector(".nav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > nav.offsetHeight + 100) {
+    consultBtn.classList.add("sticky");
+  } else {
+    consultBtn.classList.remove("sticky");
+  }
+});
+
+
+document.querySelectorAll('.faq-question').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-answer');
+
+    document.querySelectorAll('.faq-item').forEach((other) => {
+      if (other !== item) {
+        other.classList.remove('open');
+        const otherAnswer = other.querySelector('.faq-answer');
+        otherAnswer.style.maxHeight = null;
+        otherAnswer.style.opacity = 0;
+        otherAnswer.style.transform = "translateY(-10px)";
+      }
+    });
+
+    if (item.classList.contains('open')) {
+      item.classList.remove('open');
+      answer.style.maxHeight = null;
+      answer.style.opacity = 0;
+      answer.style.transform = "translateY(-10px)";
+    } else {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      answer.style.opacity = 1;
+      answer.style.transform = "translateY(0)";
+    }
+  });
+});
