@@ -4,9 +4,9 @@
   const arrowRight = document.getElementById('arrowRight');
 const slides = [
   { src: 'images/IMG_0115.JPG', label: 'Indiv. class' },
-  { src: 'images/groupclasses.png', label: 'Group class' },
-  { src: 'images/onlinesession.png', label: 'Online session' },
-  { src: 'images/bootcamp.png', label: 'Bootcamp' }
+  { src: 'images/groupclasses.jpg', label: 'Group class' },
+  { src: 'images/onlinesession.jpg', label: 'Online session' },
+  { src: 'images/bootcamp.jpg', label: 'Bootcamp' }
 ];
 
 let current = 0;
