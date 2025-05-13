@@ -18,18 +18,19 @@ input,select{vertical-align:middle}
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100vw;
 }
 
 body {
+    max-width: 100vw;
   font-family: 'Helvetica Neue', sans-serif;
   background: #fff;
   color: #1a1a1a;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
+header {
+  margin: 30px auto;
+ width: 90vw;
 }
 
 .nav {
@@ -69,7 +70,7 @@ svg[height='0'][aria-hidden='true'] {
 }
 
 .featured {
-  justify-content: center;
+    margin: 0 auto;
   display: grid;
   grid-template: auto 1fr auto / auto 1fr auto;
   max-width: 80vw;margin-inline: auto; /* ✅ horizontal center */
@@ -246,28 +247,3 @@ img {
   width: 100%;
 }
 
-@property --w {
-  syntax: '<length>';
-  initial-value: 0px;
-  inherits: true;
-}
-
-@property --u {
-  syntax: '<length>';
-  initial-value: 0px;
-  inherits: true;
-}
-
-main {
-  --w: 100cqw;
-  --u: 5em;
-  --n: max(1, round(tan(atan2(var(--w), var(--u)))));
-  display: grid;
-  grid-gap: .5em;
-  grid-template-columns: repeat(var(--n), 1fr);
-  padding: .5em;
-}
-
-.featured {
-  grid-area: 1 / 1 / span 2 / calc(-2 + clamp(0, 3 - var(--n), 1));
-}
