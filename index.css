@@ -41,6 +41,7 @@ h2 {
 body {
    min-height: 100vh; /* Ensure body fills the screen */
   background: url('images/bg.png') no-repeat center center;
+  background-color: #f5f0d6;
   background-size: cover;
   background-attachment: fixed; /* Optional */
     max-width: 100vw;

@@ -3,9 +3,9 @@
   const arrowLeft = document.getElementById('arrowLeft');
   const arrowRight = document.getElementById('arrowRight');
 const slides = [
-  { src: 'images/IMG_0115.JPG', label: 'Indiv. class' },
-  { src: 'images/groupclasses.jpg', label: 'Group class' },
-  { src: 'images/onlinesession.jpg', label: 'Online session' },
+  { src: 'images/ambitious-studio-rick-barrett-03b61PY89hs-unsplash.jpg', label: 'Indiv. class' },
+  { src: 'images/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg', label: 'Group class' },
+  { src: 'images/computer-coffee.jpg', label: 'Online session' },
   { src: 'images/bootcamp.jpg', label: 'Bootcamp' }
 ];
 
