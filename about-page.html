@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Fernando - Personal Trainer & Nutrition Coach</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    .hero-about {
+      padding: 2em 0;
+      background: linear-gradient(135deg, rgba(245, 240, 214, 0.9), rgba(255, 255, 255, 0.8));
+      text-align: center;
+    }
+    
+    .hero-about h1 {
+      font-size: 3rem;
+      margin-bottom: 1em;
+      color: #1a1a1a;
+    }
+    
+    .hero-about p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    .story-section {
+      padding: 4em 0;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3em;
+      align-items: center;
+      margin-bottom: 4em;
+    }
+    
+    .story-text {
+      padding: 0 2em;
+    }
+    
+    .story-text h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1em;
+      text-align: left;
+    }
+    
+    .story-text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5em;
+    }
+    
+    .story-img {
+      text-align: center;
+    }
+    
+    .story-img img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .credentials-section {
+      background: #fff;
+      padding: 4em 2em;
+      border-radius: 30px;
+      margin: 2em auto;
+      max-width: 1000px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+    
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
+    }
+    
+    .credential-card {
+      text-align: center;
+      padding: 1.5em;
+      border: 2px solid #f0f0f0;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    
+    .credential-card:hover {
+      transform: translateY(-5px);
+      border-color: #ddd;
+    }
+    
+    .credential-icon {
+      font-size: 3rem;
+      margin-bottom: 1em;
+    }
+    
+    .values-section {
+      padding: 4em 2em;
+      text-align: center;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      margin-top: 3em;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .value-card {
+      background: linear-gradient(135deg, #f8f8f8, #fff);
+      padding: 2em;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .value-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1em;
+      color: #333;
+    }
+    
+    .approach-section {
+      background: #000;
+      color: #fff;
+      padding: 4em 2em;
+      margin: 4em 0;
+      text-align: center;
+    }
+    
+    .approach-section h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 2em;
+    }
+    
+    .approach-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .step {
+      text-align: center;
+      padding: 1.5em;
+    }
+    
+    .step-number {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      color: #000;
+      border-radius: 50%;
+      line-height: 50px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+    
+    .cta-section {
+      text-align: center;
+      padding: 4em 2em;
+      background: linear-gradient(135deg, rgba(245, 240, 214, 0.5), rgba(255, 255, 255, 0.8));
+    }
+    
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1em;
+    }
+    
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 2em;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-about h1 {
+        font-size: 2rem;
+      }
+      
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 2em;
+      }
+      
+      .story-text {
+        padding: 0 1em;
+        text-align: center;
+      }
+      
+      .story-text h2 {
+        text-align: center;
+      }
+      
+      .approach-section h2,
+      .cta-section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">
+      <img src="images/logo_long.png" alt="Fernando Fitness">
+    </div>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="#classes">Classes</a>
+      <a href="about.html" style="font-weight: bold;">About me</a>
+      <a href="#prices">Pricing</a>
+      <a href="#FaQ">FaQ</a>
+      <button class="outline-btn">online consulting</button>
+    </nav>
+  </header>
+
+  <section class="hero-about">
+    <h1>Meet Fernando</h1>
+    <p>Transforming lives through evidence-based fitness and personalized nutrition coaching</p>
+  </section>
+
+  <section class="story-section">
+    <div class="story-grid">
+      <div class="story-text">
+        <h2>My Journey</h2>
+        <p>My fitness journey began over 10 years ago when I discovered the transformative power of proper training and nutrition. What started as a personal quest for better health evolved into a passion for helping others achieve their wellness goals.</p>
+        <p>After experiencing firsthand how the right approach to fitness can change not just your body, but your entire mindset and quality of life, I knew I had found my calling.</p>
+      </div>
+      <div class="story-img">
+        <img src="images/IMG_6144.jpeg" alt="Fernando training">
+      </div>
+    </div>
+    
+    <div class="story-grid">
+      <div class="story-img">
+        <img src="images/ambitious-studio-rick-barrett-03b61PY89hs-unsplash.jpg" alt="Training session">
+      </div>
+      <div class="story-text">
+        <h2>Why I Do This</h2>
+        <p>I believe everyone deserves to feel strong, confident, and healthy in their own body. Too often, people get lost in complicated routines or unsustainable diets that lead to frustration and burnout.</p>
+        <p>My mission is to cut through the noise and provide you with practical, science-based strategies that fit into your real life. Whether you're a complete beginner or looking to break through plateaus, I'm here to guide you every step of the way.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="credentials-section">
+    <h2>Credentials & Expertise</h2>
+    <div class="credentials-grid">
+      <div class="credential-card">
+        <div class="credential-icon">🎓</div>
+        <h3>Certified Personal Trainer</h3>
+        <p>NASM-CPT with specialized focus on functional movement and injury prevention</p>
+      </div>
+      <div class="credential-card">
+        <div class="credential-icon">🥗</div>
+        <h3>Nutrition Specialist</h3>
+        <p>Precision Nutrition Level 1 Coach with expertise in sustainable eating habits</p>
+      </div>
+      <div class="credential-card">
+        <div class="credential-icon">🏃</div>
+        <h3>Movement Expert</h3>
+        <p>Certified in mobility and corrective exercise with FMS Level 2</p>
+      </div>
+      <div class="credential-card">
+        <div class="credential-icon">💪</div>
+        <h3>10+ Years Experience</h3>
+        <p>Over 500 clients helped to achieve their health and fitness goals</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach-section">
+    <h2>My Approach</h2>
+    <div class="approach-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Assessment</h3>
+        <p>Comprehensive evaluation of your current fitness level, movement patterns, and lifestyle</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Goal Setting</h3>
+        <p>Clear, realistic objectives that align with your personal values and lifestyle</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Custom Plan</h3>
+        <p>Personalized training and nutrition strategy designed specifically for you</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Support</h3>
+        <p>Ongoing guidance, adjustments, and motivation to keep you on track</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section">
+    <h2>My Core Values</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <h3>Evidence-Based</h3>
+        <p>Every recommendation is backed by scientific research and proven methodologies</p>
+      </div>
+      <div class="value-card">
+        <h3>Sustainable</h3>
+        <p>Focus on long-term habits that you can maintain for life, not quick fixes</p>
+      </div>
+      <div class="value-card">
+        <h3>Individual</h3>
+        <p>Personalized approach that respects your unique circumstances and preferences</p>
+      </div>
+      <div class="value-card">
+        <h3>Empowering</h3>
+        <p>Teaching you the 'why' behind every strategy so you become your own expert</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Start Your Journey?</h2>
+    <p>Let's work together to create a sustainable, enjoyable path to your best self</p>
+    <button class="cta">Book Free Consultation</button>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <nav class="footer-menu">
+        <a href="index.html">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="about.html">About me</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2025 Fernando Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Go back to top">↑</button>
+
+  <script src="index.js"></script>
+</body>
+</html>
