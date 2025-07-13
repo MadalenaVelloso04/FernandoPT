@@ -23,14 +23,11 @@ function updateSlide() {
     imageEl.src = slides[current].src;
     labelText.textContent = slides[current].label;
 
-    // Force layout reflow (may help ensure browser sees the change)
-    void imageEl.offsetHeight;
-
     imageEl.classList.remove('fade');
     labelText.classList.remove('fade');
 
     updateDots();
-  }, 300); // match transition time exactly
+  }, 500); // match transition time exactly
 }
 
 
