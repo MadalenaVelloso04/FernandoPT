@@ -49,10 +49,36 @@ body {
   color: #1a1a1a;
 }
 
-header {
-  margin: 30px auto;
- width: 90vw;
-}
+   /* Enhanced body with animated gradient overlay */
+    body {
+      min-height: 100vh;
+     background-color: #f5f0d6;
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+
+ header {
+      margin: 30px auto;
+      width: 90vw;
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 20px;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+
+    header:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
 
 .nav {
   display: flex;
